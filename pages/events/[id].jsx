@@ -4,6 +4,7 @@ import {getEventById} from "../../utils/dummy-data";
 import EventSummary from "../../components/event-detail/event-summary";
 import EventLogistics from "../../components/event-detail/event-logistics";
 import EventContent from "../../components/event-detail/event-content";
+import ErrorAlert from "../../components/ui/error-alert";
 
 
 const EventDetails = () => {
@@ -11,7 +12,7 @@ const EventDetails = () => {
 
     const  details = getEventById(query.id);
     if (!details) {
-        return <p>No event found!</p>;
+        return <ErrorAlert>No event found!</ErrorAlert>;
     }
     return (
         <>
