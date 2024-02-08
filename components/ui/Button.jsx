@@ -5,7 +5,7 @@ import classes from './Button.module.css';
 const Button = ({path,children,}) => {
     if (!path){
         return (
-            <button className={classes.btn} onClick={()=>{}}>{children}</button>
+            <button className={classes.btn}  type='submit'>{children}</button>
         )
     }
     return (
